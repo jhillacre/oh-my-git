@@ -29,7 +29,7 @@ if [ -n "${BASH_VERSION}" ]; then
 
     : ${omg_default_color_on:='\[\033[1;37m\]'}
     : ${omg_default_color_off:='\[\033[0m\]'}
-    : ${omg_last_symbol_color:='\e[0;31m\e[40m'}
+    : ${omg_last_symbol_color:='\e[0;36m\e[40m'}
     
     PROMPT='$(build_prompt)'
     RPROMPT='%{$reset_color%}%T %{$fg_bold[white]%} %n@%m%{$reset_color%}'
@@ -98,9 +98,9 @@ if [ -n "${BASH_VERSION}" ]; then
         local yellow_on_white="${yellow}${background_white}"
         local red_on_white="${red}${background_white}"
         local red_on_black="${red}${background_black}"
-        local black_on_red="${black}${background_red}"
-        local white_on_red="${white}${background_red}"
-        local yellow_on_red="${yellow}${background_red}"
+        local black_on_red="${black}${background_cyan}"
+        local white_on_red="${white}${background_cyan}"
+        local yellow_on_red="${yellow}${background_cyan}"
 
 
         # Flags
